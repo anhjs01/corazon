@@ -1,0 +1,60 @@
+.bubble
+{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+
+}
+body
+{
+  min-height: 100vh;
+  background: #dd3e54;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #6be585, #dd3e54);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #6be585, #dd3e54); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+  .container
+{
+  position: relative;
+  width: 500%;
+  height: 500vh;
+  overflow: hidden;
+  bottom: -200px;
+}
+  .bubbles
+{
+  position: relative;
+  display: flex
+} 
+.bubbles span
+{
+ position: relative;
+ width: 50px;
+ height: 20px; 
+ background: #1BFD9C;
+ margin: 0 4px;
+ border-radius: 50%;
+ box-shadow: 0 0 0 10px #1bfd9b3d,
+ 0 0 50px #1BFD9C,
+ 0 0 100px #1BFD9C;
+ animation: animate 15s linear infinite;
+ animation-duration: calc(125s / var(--i));
+ bottom: 300px;
+}
+.bubbles span:nth-child(even)
+{
+  background: #ff2d75;
+  box-shadow: 0 0 0 10px #ff2d7636,
+  0 0 50px #ff2d75,
+  0 0 100px #ff2d75;
+}
+@keyframes animate
+{
+ 0%
+ {
+   transform: translateY(350vh) scale(0);
+ }
+ 100%
+ {
+   transform: translateY(-10vh) scale(1);
+ }
+}
